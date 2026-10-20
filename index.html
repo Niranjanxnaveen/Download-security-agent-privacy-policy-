@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Download Security Agent</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #00f0ff;
+      --accent-subtle: rgba(0, 240, 255, 0.12);
+      --accent-magenta: #ff2a85;
+      --success: #05ffa1;
+      --code-bg: #1e293b;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Inter", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-stack);
+      line-height: 1.7;
+      padding: 48px 24px;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      background: var(--accent-subtle);
+      color: var(--accent);
+      border: 1px solid rgba(0, 240, 255, 0.35);
+      margin-bottom: 16px;
+    }
+
+    .badge::before {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+    }
+
+    .meta-bar {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .lead-box {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.08) 0%, rgba(255, 42, 133, 0.06) 100%);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .lead-box p {
+      color: #e5e7eb;
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1.75;
+      margin-bottom: 0;
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 36px;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: -0.015em;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.15em;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #161e2e;
+      color: #ffffff;
+      padding: 14px 18px;
+      font-weight: 600;
+      border-bottom: 1px solid var(--card-border);
+      letter-spacing: 0.02em;
+    }
+
+    th:first-child {
+      width: 200px;
+      min-width: 180px;
+    }
+
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--card-border);
+      color: var(--text-muted);
+      vertical-align: top;
+      line-height: 1.65;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      background: var(--code-bg);
+      color: var(--accent);
+      padding: 3px 7px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-left: 4px solid var(--success);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 24px 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .highlight-card h3 {
+      font-size: 1.12rem;
+      color: var(--success);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .highlight-card p {
+      margin-bottom: 0;
+      color: #d1d5db;
+    }
+
+    .path-block {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-family: ui-monospace, monospace;
+      color: var(--accent);
+      margin: 12px 0 16px 0;
+      font-size: 0.92rem;
+      word-break: break-all;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 28px;
+      border-top: 1px solid var(--card-border);
+      color: #6b7280;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 28px 16px;
+      }
+      h1 {
+        font-size: 1.85rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      th:first-child {
+        width: 140px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+        padding: 0;
+      }
+      .container {
+        max-width: 100%;
+      }
+      h1, h2, strong, th {
+        color: #000000;
+      }
+      p, td, li {
+        color: #333333;
+      }
+      .lead-box, .highlight-card, .table-container {
+        border: 1px solid #cccccc;
+        background: none;
+        box-shadow: none;
+      }
+      code, .path-block {
+        background: #eeeeee;
+        color: #000000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Official Compliance Document</div>
+      <h1>Privacy Policy — Download Security Agent</h1>
+      <div class="meta-bar">
+        <span><strong>Effective Date:</strong> October 20, 2026</span>
+        <span>&bull;</span>
+        <span><strong>Applies to:</strong> Google Chrome Extension &amp; Local Security Agent</span>
+      </div>
+    </header>
+
+    <div class="lead-box">
+      <p>
+        <strong>Core Privacy Commitment:</strong> Download Security Agent is an <em>on-device, local-first</em> security platform. 
+        Your downloaded files, browsing behavior, URLs, and file payloads are analyzed <strong>strictly on your local machine</strong>. 
+        We do not collect, transmit, store, or sell any personal data to remote servers or third-party cloud infrastructure.
+      </p>
+    </div>
+
+    <section>
+      <h2>1. Overview &amp; Single Purpose</h2>
+      <p>
+        <strong>Download Security Agent</strong> is an endpoint security system consisting of a browser extension and a local desktop host daemon.
+        Its sole purpose is to provide real-time browser download inspection and malware defense using local heuristic, signature, PE structure, and machine learning models.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. What Information We Process</h2>
+      <p>The extension monitors browser download events strictly to inspect files for security threats. Here is the exact data processed during an inspection:</p>
+      <ul>
+        <li><strong>Download Metadata:</strong> Filename, local target file path, MIME type, file size, and download source URL (used solely for local URL-reputation lookup and local audit logging).</li>
+        <li><strong>File Binary Payload:</strong> Read locally from disk by the on-device agent to compute cryptographic hashes (SHA-256, SHA-1, MD5), inspect PE headers, check Authenticode digital signatures, evaluate YARA-X rules, and scan with the local ClamAV daemon.</li>
+      </ul>
+      <div class="highlight-card">
+        <h3>Zero Cloud File Uploads</h3>
+        <p>
+          Unlike cloud-based antivirus software, the binary contents of your downloaded files are <strong>never uploaded to external cloud servers</strong>. 
+          All 11 inspection engines execute entirely inside your local operating system environment.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Chrome Extension Permissions &amp; Technical Justification</h2>
+      <p>In adherence to the Chrome Web Store Minimum Permissions Policy, Download Security Agent requests only the minimum set of permissions necessary to function:</p>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Technical Purpose &amp; Justification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>downloads</code></td>
+              <td>
+                Allows the extension to detect newly initiated downloads (<code>chrome.downloads.onCreated</code>), temporarily pause dangerous downloads, and resume or cancel them based on scan verdicts.
+              </td>
+            </tr>
+            <tr>
+              <td><code>nativeMessaging</code></td>
+              <td>
+                Allows the extension to communicate via standard input/output (stdio) with the local host security agent (<code>com.downloadsecurity.agent</code>) running on your computer.
+              </td>
+            </tr>
+            <tr>
+              <td><code>storage</code></td>
+              <td>
+                Used strictly to store local user preferences within the browser (such as auto-quarantine preferences, notification settings, and dashboard UI theme states).
+              </td>
+            </tr>
+            <tr>
+              <td><code>tabs</code></td>
+              <td>
+                Allows the extension to open a local threat warning or SOC Forensic Incident Dossier tab when a high-risk or malicious download is intercepted.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Third-Party Services &amp; Data Sharing</h2>
+      <p>
+        We strictly respect user privacy and adhere to the Chrome Web Store Developer Program Policies:
+      </p>
+      <ul>
+        <li><strong>No Selling of Personal Data:</strong> We do not sell, rent, monetize, or trade any user data or download logs to data brokers, advertisers, or third parties.</li>
+        <li><strong>No Targeted Advertising:</strong> We do not serve advertisements, build user behavioral profiles, or track browsing history across websites.</li>
+        <li><strong>Optional Threat Intelligence Lookups:</strong> If a user explicitly configures an external API key (such as VirusTotal or AlienVault OTX) in their local settings, only the cryptographic file hash (e.g. SHA-256) is queried against that provider's public API. No personal identifiers or file payloads are sent.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Local Data Storage &amp; Retention</h2>
+      <p>
+        Inspection logs, scan verdicts, and quarantined file metadata are stored exclusively on your local workstation in:
+      </p>
+      <div class="path-block">
+        %LOCALAPPDATA%\DownloadSecurityAgent\history.json
+      </div>
+      <p>
+        Users have complete ownership over this data and may clear their scan history, purge quarantined files, or delete the data directory at any time directly through the Desktop Dashboard settings or by deleting the file from disk.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Security of Your Data</h2>
+      <p>
+        Communication between the browser extension and the local security host occurs via Chrome's native messaging protocol, strictly bounded by the Chrome operating system sandbox.
+        Local WebSocket IPC used by the desktop dashboard binds exclusively to the loopback interface (<code>127.0.0.1</code>) and is protected by local authentication tokens to prevent unauthorized cross-origin access.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Children's Privacy</h2>
+      <p>
+        Our extension and desktop application do not knowingly collect or solicit any personal information from children under the age of 13.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Policy Updates</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect improvements in our scanning capabilities or changes to browser security standards. 
+        Any changes will be posted to this page with an updated "Effective Date."
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Contact &amp; Inquiries</h2>
+      <p>
+        If you have any questions, feedback, or inquiries regarding this Privacy Policy or the security architecture of the Download Security Agent, please contact our support team through the official Chrome Web Store extension support tab or your designated organization administrator.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Download Security Agent Project. Distributed under Open Source Security Directives.</p>
+    </footer>
+  </div>
+</body>
+</html>
